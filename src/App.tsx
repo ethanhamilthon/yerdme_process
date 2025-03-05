@@ -59,14 +59,7 @@ const Project = styled("div", {
     display: "flex",
     gap: "$sm",
     alignItems: "center",
-    "& > img": {
-      width: "$xxl",
-      height: "$xxl",
-      "@mobile": {
-        width: "$xl",
-        height: "$xl",
-      },
-    },
+
     "& > div": {
       display: "flex",
       flexDirection: "column",
@@ -99,6 +92,33 @@ const IconContainer = styled("a", {
   },
 });
 
+const ImageContainer = styled("div", {
+  display: "flex",
+  padding: "$sm",
+  backgroundColor: "$back",
+  borderRadius: "12px",
+  "& > img": {
+    width: "$xl",
+    height: "$xl",
+    "@mobile": {
+      width: "$lg",
+      height: "$lg",
+    },
+  },
+  "& > span": {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "$xl",
+    width: "$xl",
+    height: "$xl",
+    "@mobile": {
+      width: "$lg",
+      height: "$lg",
+    },
+  },
+});
+
 function App() {
   return (
     <MainContainer>
@@ -107,7 +127,10 @@ function App() {
       <ProjectsContainer>
         <Project>
           <div>
-            <img src="https://n.yerd.me/favicon.ico" alt="" />
+            <ImageContainer>
+              <img src="https://n.yerd.me/favicon.ico" alt="" />
+            </ImageContainer>
+
             <div>
               <h3>Notez</h3>
               <span>Zen and minimalistic note taking app</span>
@@ -125,12 +148,15 @@ function App() {
             </IconContainer>
           </div>
         </Project>
+
         <Project>
           <div>
-            <img src="https://w.yerd.me/favicon.ico" alt="" />
+            <ImageContainer>
+              <img src="https://w.yerd.me/favicon.ico" alt="" />
+            </ImageContainer>
             <div>
               <h3>Sozdik</h3>
-              <span>Ai-powered flash card app</span>
+              <span>AI-powered flash card app</span>
             </div>
           </div>
           <div>
@@ -142,6 +168,66 @@ function App() {
             </IconContainer>
             <IconContainer href="https://w.yerd.me" target="_blank">
               <ExternalLink size={24} />
+            </IconContainer>
+          </div>
+        </Project>
+        <Project>
+          <div>
+            <ImageContainer>
+              <span>L</span>
+            </ImageContainer>
+            <div>
+              <h3>Leverans</h3>
+              <span>Docker based deployment tool</span>
+            </div>
+          </div>
+          <div>
+            <IconContainer
+              href="https://github.com/ethanhamilthon/leverans"
+              target="_blank"
+            >
+              <Github size={24} />
+            </IconContainer>
+          </div>
+        </Project>
+        <Project>
+          <div>
+            <ImageContainer>
+              <span>G</span>
+            </ImageContainer>
+            <div>
+              <h3>GoHTMX Boilerplate</h3>
+              <span>Template for web app with Golang, HTMX and Tailwind</span>
+            </div>
+          </div>
+          <div>
+            <IconContainer
+              href="https://github.com/ethanhamilthon/gohtmx_boiler"
+              target="_blank"
+            >
+              <Github size={24} />
+            </IconContainer>
+          </div>
+        </Project>
+        <Project>
+          <div>
+            <ImageContainer>
+              <span>E</span>
+            </ImageContainer>
+            <div>
+              <h3>Ehto</h3>
+              <span>
+                Minimalistic TS library for sharing state between React
+                components
+              </span>
+            </div>
+          </div>
+          <div>
+            <IconContainer
+              href="https://github.com/ethanhamilthon/ehto"
+              target="_blank"
+            >
+              <Github size={24} />
             </IconContainer>
           </div>
         </Project>
